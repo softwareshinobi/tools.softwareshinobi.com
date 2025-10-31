@@ -1,0 +1,20 @@
+services:
+
+    tools.softwareshinobi.com:
+
+        container_name: tools.softwareshinobi.com
+        
+        image: softwareshinobi/tools.softwareshinobi.com
+
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+    
+        restart: unless-stopped
+
+        ports:
+
+            - 8000:80
+
